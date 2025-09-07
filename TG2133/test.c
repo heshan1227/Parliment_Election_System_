@@ -1,7 +1,7 @@
 #include <stdio.h>
 int main ()
 {
-	printf("hellow world");
+	printf("TG2106");
 
 	return 0;
 }
