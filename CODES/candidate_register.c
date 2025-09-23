@@ -13,7 +13,7 @@ void candidateRegistrationPage() {
     char choice;
 
     system("cls"); // Clears the console screen
-    printf("Candidate Registration Form\n");
+    printf("Candidate Registration Form\n\n");
 
     printf("Name (EX- Aloka Perera): ");
     getchar(); // clear buffer before fgets
@@ -32,7 +32,7 @@ void candidateRegistrationPage() {
     fgets(candidateID, sizeof(candidateID), stdin);
     candidateID[strcspn(candidateID, "\n")] = '\0';
 
-    printf("\nSubmit (S) or Back (B): ");
+    printf("\n\n\nSubmit (S) or Back (B): ");
     scanf(" %c", &choice);
 
     if (choice == 'B' || choice == 'b') {
@@ -51,7 +51,7 @@ void candidateRegistrationPage() {
     fprintf(fp, "%s|%s|%s|%s\n", name, nic, party, candidateID);
     fclose(fp);
 
-    printf("\nRequest submitted successfully.\n");
+    printf("\n\nRequest submitted successfully.\n");
     system("pause");
     candidateGateway();
 }

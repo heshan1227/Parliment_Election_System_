@@ -12,12 +12,12 @@ void mainMenu() {
 
     while (1) {
         system("cls"); // Clear screen
-        printf("Parliament Election - 2050\n");
+        printf("\t\t\t\t\tParliament Election - 2050\n\n");
         printf("Choose Your Profile Type...\n");
         printf(" 1. Officer\n");
         printf(" 2. Candidate\n");
         printf(" 3. Voter\n");
-        printf(" 0. Exit\n");
+        printf(" 0. Exit\n\n\n");
         printf("Enter your choice: ");
         scanf("%d", &choice);
 

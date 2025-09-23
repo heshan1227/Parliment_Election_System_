@@ -14,7 +14,7 @@ void candidateLoginPage() {
     int found = 0;
 
     system("cls"); // Clear screen
-    printf("***Welcome to Candidate Login***\n");
+    printf("\t\t\t\t\t***Welcome to Candidate Login***\n\n\n");
     printf("USERNAME (EX- U1234c): ");
     scanf("%s", username);
     printf("PASSWORD: ");

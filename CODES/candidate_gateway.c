@@ -12,11 +12,11 @@ void candidateGateway() {
     int choice;
 
     system("cls"); // Clears the console screen (Windows only)
-    printf("***Welcome To Candidate Login Page***\n");
+    printf("\t\t\t\t\t***Welcome To Candidate Login Page***\n\n\n");
     printf("1. LOGIN\n");
     printf("2. Register as a candidate\n");
     printf("3. View Results\n");
-    printf("B. Back\n");
+    printf("B. Back\n\n");
     printf("Enter your choice: ");
     scanf("%d", &choice);
 
@@ -30,6 +30,11 @@ void candidateGateway() {
         case 3:
             showResults();
             break;
+	case 'b':
+            mainMenu();
+            break;
+	case 'B':
+            mainMenu();
         default:
             mainMenu();
     }

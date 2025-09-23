@@ -14,7 +14,7 @@ void officerLoginPage() {
     int found = 0;
 
     system("cls");
-    printf("***Welcome To Officer Login Page***\n");
+    printf("\t\t\t\t\t***Welcome To Officer Login Page***\n\n");
     printf("USERNAME (EX- officer1): ");
     scanf("%s", username);
     printf("PASSWORD (EX- pass123): ");

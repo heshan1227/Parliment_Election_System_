@@ -3,3 +3,7 @@ F4567c|Nadeesha Kumuduni|201712345679|Freedom Party|pass654
 U2345c|Tharindu Jayalath|201812345680|Unity Party|pass987
 R1122c|Kalana Dissanayake|201912345681|River Party|pass111
 F9988c|Ishara Amarasinghe|202012345682|Freedom Party|pass222
+U8765c|Tharindu Fernando|200412345681|Unity Party|pass123
+R3456c|Ishara Gunawardena|200512345682|River Party|pass123
+U7788c|Sahan Kumara|201312345690|Unity Party|pass123
+U1227c|Heshan Binuwara|200436201454|Unity party|pass123

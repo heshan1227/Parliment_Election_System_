@@ -13,7 +13,7 @@ void showResults() {
     if (fp == NULL) {
         printf("Parliament Election 2050 – Results —Not ready yet—\n");
     } else {
-        printf("Parliament Election 2050 – Results\n");
+        printf("Parliament Election 2050 – Results\n\n\n");
         while (fgets(line, sizeof(line), fp)) {
             printf("%s", line);
         }

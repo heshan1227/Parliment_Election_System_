@@ -11,7 +11,7 @@ void officerDashboard();
 
 void candidateRequestsPage() {
     system("cls"); // Clears the console screen (Windows only)
-    printf("Candidate Requests\n");
+    printf("Candidate Requests\n\n");
 
     FILE *fp = fopen(REQUEST_FILE, "r");
     if (fp == NULL) {
@@ -33,7 +33,7 @@ void candidateRequestsPage() {
     fclose(fp);
 
     // Ask for action
-    printf("\nA = Approve\nR = Reject\nB = Back\n");
+    printf("\nA = Approve\nR = Reject\nB = Back\n\n");
     char choice;
     printf("Enter your choice: ");
     scanf(" %c", &choice);

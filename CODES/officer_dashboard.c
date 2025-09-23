@@ -12,11 +12,11 @@ void officerDashboard() {
     int choice;
 
     system("cls");
-    printf("Hello! Mr./Mrs. officer1\n");
+    printf("Hello! Mr./Mrs. officer1\n\n");
     printf("1. Candidate requests\n");
     printf("2. Voter requests\n");
-    printf("3. Parliament Election 2050 – Results\n");
-    printf("B. Back\n");
+    printf("3. Parliament Election 2050 - Results\n");
+    printf("B. Back\n\n\n");
     printf("Enter your choice: ");
     scanf("%d", &choice);
 
