@@ -9,7 +9,8 @@
 void voterGateway();
 
 void voterRegistrationPage() {
-    char name[100], nic[20];
+    char status[2];
+    char name[100], nic[20], password[7];
     char choice;
 
     system("cls"); // Clears the console screen
@@ -23,6 +24,11 @@ void voterRegistrationPage() {
     printf("NIC (EX- 200345678901): ");
     fgets(nic, sizeof(nic), stdin);
     nic[strcspn(nic, "\n")] = '\0';
+
+    printf("PASSWORD (EX- pass123): ");
+    fgets(password, sizeof(password), stdin);
+    nic[strcspn(password, "\n")] = '\0';
+
 
     printf("\nSubmit (S) or Back (B): ");
     scanf(" %c", &choice);
@@ -40,7 +46,7 @@ void voterRegistrationPage() {
         return;
     }
 
-    fprintf(fp, "%s|%s\n", name, nic);
+    fprintf(fp, "%s|%s|%s|0\n", nic, name, password);
     fclose(fp);
 
     printf("\nRequest submitted successfully.\n");

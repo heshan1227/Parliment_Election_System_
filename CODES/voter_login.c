@@ -10,14 +10,15 @@ void voterDashboard(char nic[], char name[]);
 void voterGateway();
 
 void voterLoginPage() {
+    char status[2];
     char username[20], password[20], line[200];
     int found = 0;
 
     system("cls"); // Clear screen
     printf("Voter Login\n");
-    printf("USERNAME (Use Your NIC): ");
+    printf("USERNAME (Use Your NIC):");
     scanf("%s", username);
-    printf("PASSWORD: ");
+    printf("PASSWORD:");
     scanf("%s", password);
 
     // Open voters.txt for reading
@@ -32,7 +33,8 @@ void voterLoginPage() {
     // Search for matching NIC and password
     while (fgets(line, sizeof(line), fp)) {
         char nic[20], name[100], filePass[20];
-        sscanf(line, "%[^|]|%[^|]|%s", nic, name, filePass);
+        sscanf(line, "%[^|]|%[^|]|%[^|]|%s", nic, name, filePass, status);
+
 
         if (strcmp(username, nic) == 0 && strcmp(password, filePass) == 0) {
             found = 1;
