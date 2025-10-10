@@ -35,6 +35,7 @@ void candidateGateway() {
             break;
 	case 'B':
             mainMenu();
+            break;
         default:
             mainMenu();
     }
