@@ -7,7 +7,7 @@
 void showResults() {
     char line[200];
 
-    system("cls"); // Clears the console screen
+    system("cls");
     FILE *fp = fopen(RESULT_FILE, "r");
 
     if (fp == NULL) {
