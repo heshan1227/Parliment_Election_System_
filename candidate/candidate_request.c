@@ -1,42 +1,18 @@
-// candidate_requests.c
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
-void candidateRequestsPage();
-// Dummy forward declaration
-void officerDashboard(){
-    int choice;
+#define REQUEST_FILE "candidate_requests.txt"
+#define APPROVED_FILE "candidates.txt"
 
-    system("cls");
-    printf("Hello! Mr./Mrs. officer1\n\n");
-    printf("1. Candidate requests\n");
-    printf("2. Voter requests\n");
-    printf("3. Parliament Election 2050 - Results\n");
-    printf("B. Back\n\n\n");
-    printf("Enter your choice: ");
-    scanf("%d", &choice);
 
-    switch (choice) {
-        case 1:
-            candidateRequestsPage();
-            break;
-        /*case 2:
-            voterRequestsPage();
-            break;
-        case 3:
-            showResults();
-            break;*/
-        default:
-            //mainMenu();
-    }
-}
-
+void officerDashboard();
 void candidateRequestsPage() {
-    system("cls"); // Clears the console screen (Windows only)
+    system("cls");
+
     printf("Candidate Requests\n\n");
 
-    FILE *fp = fopen("candidatereq.txt", "r");
+    FILE *fp = fopen(REQUEST_FILE, "r");
     if (fp == NULL) {
         printf("No candidate requests found.\n");
         system("pause");
@@ -45,9 +21,9 @@ void candidateRequestsPage() {
     }
 
     char line[200];
+
     int index = 1;
 
-    // Display all requests
     while (fgets(line, sizeof(line), fp)) {
         char name[100], nic[20], party[50], candidateID[20];
         sscanf(line, "%[^|]|%[^|]|%[^|]|%s", name, nic, party, candidateID);
@@ -55,22 +31,20 @@ void candidateRequestsPage() {
     }
     fclose(fp);
 
-    // Ask for action
     printf("\nA = Approve\nR = Reject\nB = Back\n\n");
     char choice;
     printf("Enter your choice: ");
     scanf(" %c", &choice);
-    getchar(); // clear buffer
+    getchar(); 
 
     if (choice == 'B' || choice == 'b') {
         officerDashboard();
         return;
     }
 
-    // Reopen file to process first request
-    fp = fopen("candidatereq.txt", "r");
+    fp = fopen(REQUEST_FILE, "r");
     FILE *temp = fopen("temp.txt", "w");
-    FILE *approved = fopen("candidates.txt", "a");
+    FILE *approved = fopen(APPROVED_FILE, "a");
 
     int processed = 0;
     while (fgets(line, sizeof(line), fp)) {
@@ -79,15 +53,14 @@ void candidateRequestsPage() {
             sscanf(line, "%[^|]|%[^|]|%[^|]|%s", name, nic, party, candidateID);
 
             if (choice == 'A' || choice == 'a') {
-                fprintf(approved,"\n");
-                fprintf(approved, "%s|%s|%s|%s|pass123\n", candidateID, name, nic, party); // default password
+                fprintf(approved, "%s|%s|%s|%s|pass123\n", candidateID, name, nic, party); 
                 printf("Approved: %s\n", name);
             } else if (choice == 'R' || choice == 'r') {
                 printf("Rejected: %s\n", name);
             }
             processed = 1;
         } else {
-            fputs(line, temp); // keep remaining requests
+            fputs(line, temp);
         }
     }
 
@@ -95,16 +68,9 @@ void candidateRequestsPage() {
     fclose(temp);
     fclose(approved);
 
-    remove("candidatereq.txt");
-    rename("temp.txt", "candidatereq.txt");
+    remove(REQUEST_FILE);
+    rename("temp.txt", REQUEST_FILE);
 
     system("pause");
-    candidateRequestsPage(); // reload page
-}
-
-void main(){
-
-    officerDashboard();
-    candidateRequestsPage();
-
+    candidateRequestsPage(); 
 }
