@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// Function declarations
+// Functions
 void officerLoginPage();
 void candidateGateway();
 void voterGateway();

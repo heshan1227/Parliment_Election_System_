@@ -17,7 +17,6 @@ typedef struct {
 Candidate candidates[100];
 int candidateCount = 0;
 
-// Load candidates from candidates.txt
 void loadCandidates() {
     FILE *fp = fopen(CANDIDATE_FILE, "r");
     if (fp == NULL) {
@@ -38,7 +37,6 @@ void loadCandidates() {
     fclose(fp);
 }
 
-// Count votes from votes.txt
 void countVotes() {
     FILE *fp = fopen(VOTES_FILE, "r");
     if (fp == NULL) {

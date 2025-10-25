@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// Dummy declarations
+//declarations
 void candidateLoginPage();
 void candidateRegistrationPage();
 void showResults();
@@ -11,7 +11,7 @@ void mainMenu();
 void candidateGateway() {
     int choice;
 
-    system("cls"); // Clears the console screen (Windows only)
+    system("cls"); // Clear
     printf("\t\t\t\t\t***Welcome To Candidate Login Page***\n\n\n");
     printf("1. LOGIN\n");
     printf("2. Register as a candidate\n");

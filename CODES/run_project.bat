@@ -8,8 +8,6 @@ gcc main_menu.c officer_login.c officer_dashboard.c candidate_requests.c candida
 :: Check if compilation succeeded
 if exist election.exe (
     echo  Compilation successful!
-    echo Running the program...
-    echo ------------------------------
     election.exe
 ) else (
     echo  Compilation failed. Please check your code.
