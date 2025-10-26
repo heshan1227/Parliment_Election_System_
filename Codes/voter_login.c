@@ -1,4 +1,4 @@
-
+//voter_login.c
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -14,7 +14,7 @@ char status[2];
 char username[20], password[20], line[200];
 int found = 0;
 
-    system("cls");  /*to clear dashboard*/
+    system("cls");  // clear screen
     printf("Voter Login\n");
     printf("USERNAME (Use Your NIC):");
     scanf("%s", username);
