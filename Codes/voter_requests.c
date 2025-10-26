@@ -74,5 +74,5 @@ printf("Voter Requests\n");
     rename("temp.txt", REQUEST_FILE);
 
     system("pause");
-    voterRequestsPage(); // reload page
+    voterRequestsPage(); 
 }
