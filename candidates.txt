@@ -1,5 +1,0 @@
-R7890c|Ravindu Senanayake|201612345678|River Party|pass321
-F4567c|Nadeesha Kumuduni|201712345679|Freedom Party|pass654
-U2345c|Tharindu Jayalath|201812345680|Unity Party|pass987
-R1122c|Kalana Dissanayake|201912345681|River Party|pass111
-F9988c|Ishara Amarasinghe|202012345682|Freedom Party|pass222
